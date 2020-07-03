@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>leftbar</title>
+<style type="text/css">
+body{margin:0;padding:0;overflow-x:hidden;}
+html, body{height:100%;}
+img{border:none;}
+*{font-family:'微软雅黑';}
+dl,dt,dd{display:block;margin:0;}
+a{text-decoration:none;}
+
+#bg{background-image:url(images/content/dotted.png);}
+.container{width:100%;height:100%;margin:auto;}
+
+/*left*/
+.leftsidebar_box{width:160px;height:auto !important;overflow:visible !important;position:fixed;height:100% !important;background-color:#3992d0;}
+.line{height:2px;width:100%;background-image:url(images/left/line_bg.png);background-repeat:repeat-x;}
+.leftsidebar_box dt{padding-left:40px;padding-right:10px;background-repeat:no-repeat;background-position:10px center;color:#f5f5f5;font-size:18px;position:relative;line-height:48px;cursor:pointer;}
+.leftsidebar_box dd{background-color:#317eb4;padding-left:40px;}
+.leftsidebar_box dd a{color:#f5f5f5;line-height:20px;}
+.leftsidebar_box dt img{position:absolute;right:10px;top:20px;}
+.system_log dt{background-image:url(images/left/system.png)}
+.custom dt{background-image:url(images/left/custom.png)}
+.channel dt{background-image:url(images/left/channel.png)}
+.app dt{background-image:url(images/left/app.png)}
+.cloud dt{background-image:url(images/left/cloud.png)}
+.syetem_management dt{background-image:url(images/left/syetem_management.png)}
+.source dt{background-image:url(images/left/source.png)}
+.statistics dt{background-image:url(images/left/statistics.png)}
+.leftsidebar_box dl dd:last-child{padding-bottom:10px;}
+.title dt{fontsize:12;padding-left:2px;}
+.leftsidebar_box dd a:hover {
+	font-size:18px;
+	font-weight:bold;
+    color: #FFF;
+} 
+</style>
+</head>
+
+<body id="bg">
+<div class="container">
+  <div class="leftsidebar_box">
+  <div class="line"></div>
+    <dl class="title">
+      <dt><font color="#3992d0">jhkdiy</font></dt>
+    </dl>
+    <div class="line"></div>
+    <dl class="system_log">
+      <dt onclick="changeImage()">我的博客<img src="images/left/select_xl01.png" alt="5" /></dt>
+      <dd class="first_dd"><a href="devicestatus.html" target="mainFrame">软件开发</a></dd>
+      <dd><a href="sysstatus.html" target="mainFrame">软件工程</a></dd>
+      <dd><a href="timeset.html" target="mainFrame">实践感想</a></dd>
+    </dl>
+    <div class="line"></div>
+    <dl class="system_log">
+      <dt onclick="changeImage()">我的项目<img src="images/left/select_xl01.png" alt="5" /></dt>
+      <dd><a href="opendoor.html" target="mainFrame">AI</a></dd>
+      <dd><a href="reboot_dc.html" target="mainFrame">PC端</a></dd>
+      <dd><a href="dcnetset.html" target="mainFrame">WEB端</a></dd>
+      <dd><a href="delDoorData.html" target="mainFrame">Linux</a></dd>
+      <dd><a href="gateidset.html" target="mainFrame">APP</a></dd>
+      <dd><a href="resetarg.html" target="mainFrame">其他</a></dd>
+    </dl>
+    <div class="line"></div>
+    <dl class="custom">
+      <dt onclick="changeImage()">我的状态<img src="images/left/select_xl01.png" alt="4" /></dt>
+      <dd class="first_dd"><a href="rightsset.html" target="mainFrame">我的工作</a></dd>
+    </dl>
+    <div class="line"></div>
+    <dl class="channel">
+      <dt>记录查询<img src="images/left/select_xl01.png" alt="3" /></dt>
+      <dd class="first_dd"><a href="doorrecord.html" target="mainFrame">门禁记录</a></dd>
+      <dd><a href="syslog.html" target="mainFrame">系统日志</a></dd>
+    </dl>
+    <div class="line"></div>
+    <dl class="app">
+      <dt onclick="changeImage()">给我留言<img src="images/left/select_xl01.png" alt="2" /></dt>
+      <dd class="first_dd"><a href="refreshtest.html" target="mainFrame">1</a></dd>
+      <dd><a href="camera.html" target="mainFrame">2</a></dd>
+      <dd><a href="showvideo.html" target="mainFrame">3</a></dd>
+      <dd><a href="camera_front.html" target="mainFrame">4</a></dd>
+      <dd><a href="showvideo_front.html" target="mainFrame">5</a></dd>
+    </dl>
+    <div class="line"></div>
+    <dl class="syetem_management">
+      <dt>其他杂项<img src="images/left/select_xl01.png" alt="1" /></dt>
+      <dd class="first_dd"><a href="rebootsys.html" target="mainFrame">1</a></dd>
+      <dd><a href="argset.html" target="mainFrame">2</a></dd>
+      <dd><a href="changepass.html" target="mainFrame">3</a></dd>
+      <dd><a href="logset.html" target="mainFrame">4</a></dd>
+      <dd><a href="netset.html" target="mainFrame">5</a></dd>
+      <dd><a href="cleandata.html" target="mainFrame">6</a></dd>
+      <dd><a href="uploadfile.html" target="mainFrame">7</a></dd>
+      <dd><a href="uploadType.html" target="mainFrame">8</a></dd>
+      <dd><a href="snap_event.html" target="mainFrame">9</a></dd>
+    </dl>
+  </div>
+</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+$(".leftsidebar_box dt").css({"background-color":"#3992d0"});
+$(".leftsidebar_box dt img").attr("src","images/left/select_xl01.png");
+$(function(){
+	$(".leftsidebar_box dd").hide();
+	$(".leftsidebar_box dt").click(function(){
+		$(".leftsidebar_box dt").css({"background-color":"#3992d0"})
+		$(this).css({"background-color": "#317eb4"});
+		$(this).parent().find('dd').removeClass("menu_chioce");
+		$(".leftsidebar_box dt img").attr("src","images/left/select_xl01.png");
+		$(this).parent().find('img').attr("src","images/left/select_xl.png");
+		$(".menu_chioce").slideUp(); 
+		$(this).parent().find('dd').slideToggle();
+		$(this).parent().find('dd').addClass("menu_chioce");
+	});
+})
+</script>
+</body>
+</html>
